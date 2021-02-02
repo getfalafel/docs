@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'Falafel', // Title for your website.
   tagline: 'A Python framework',
   url: 'https://getfalafel.github.io', // Your website URL
-  baseUrl: '/getfalafel/', // Base URL for your project */
+  baseUrl: '/docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
