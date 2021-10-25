@@ -6,7 +6,7 @@ theme = 'falafel'
 [languages]
 [languages.en]
 title = "Falafel"
-baseURL = "https://getfalafel.github.io"
+baseURL = "https://getfalafel.github.io/en"
 languageCode = "en"
 languageName = 'English'
 contentDir = 'content/english'

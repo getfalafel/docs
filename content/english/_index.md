@@ -1,11 +1,9 @@
 ---
-title: About the Falafel
-slug: about-the-falafel
+title: A Python Framework for Web
 description: ""
 menu:
   docs:
-    name: About the Falafel
-    parent: welcome-to-falafel
+    name: A Python Framework for Web
     weight: 1
 ---
 
