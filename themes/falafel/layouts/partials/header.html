@@ -2,10 +2,11 @@
   <nav>
     <ul class="menu">
       {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-        <li {{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} class="current-menu" {{ end }}>
-            <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
-        </li>
+      {{ range .Site.Menus.main }}
+      <li {{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} class="current-menu"
+        {{ end }}>
+        <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+      </li>
       {{ end }}
     </ul>
     <div class="searchbar">
@@ -21,10 +22,16 @@
       </li>
       {{ end }}
       <div class="change-language">
-        {{ if eq $.Site.Language.LanguageName "English" }}
-          <a href="{{ .Site.BaseURL }}/pt">Português</a>
-        {{ else }}
-          <a href="{{ .Site.BaseURL }}">English</a>
+        {{ range $.Site.Home.AllTranslations }}
+          {{ if eq $.Site.Language.LanguageName "English" }}
+            {{ if eq .Language.LanguageName "Português" }}
+              <a href="{{ .Permalink }}">Português</a>
+            {{ end }}
+          {{ else }}
+            {{ if eq .Language.LanguageName "English" }}
+              <a href="{{ .Permalink }}">English</a>
+            {{ end }}
+          {{ end }}
         {{ end }}
       </div>
     </ul>
