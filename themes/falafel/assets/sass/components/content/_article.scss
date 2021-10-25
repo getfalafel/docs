@@ -1,0 +1,43 @@
+article {
+  h1,
+  h2,
+  h3{
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.25rem);
+      left: 0;
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+    }
+  }
+  ul {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    li {
+      display: block;
+      margin-bottom: 0.5em;
+      padding-left: 2rem;
+      color: var(--text);
+      font-weight: 600;
+      position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: calc(50% - 0.2rem);
+          left: 1rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          background-color: var(--primary-color);
+          border-radius: 50%;
+        }
+      
+    }
+  }
+}

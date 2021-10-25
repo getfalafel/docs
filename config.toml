@@ -1,0 +1,57 @@
+baseURL = 'https://getfalafel.github.io/docs'
+title = 'Falafel'
+defaultContentLanguage = "en"
+theme = 'falafel'
+
+[languages]
+[languages.en]
+title = "Falafel"
+baseURL = "https://getfalafel.github.io"
+languageCode = "en"
+languageName = 'English'
+contentDir = 'content/english'
+footer = "An Open Source software created with Python and lots of coffe."
+weight = 1
+[languages.en.menu]
+[[languages.en.menu.main]]
+name = "Install"
+identifier = "install"
+weight = 1
+url = "getting-started/installation/"
+[[languages.en.menu.main]]
+name = "About"
+identifier = "about"
+weight = 2
+url = "/welcome-to-falafel/about-the-falafel/"
+
+[languages.pt]
+title = "Falafel"
+baseURL = "https://getfalafel.github.io/pt"
+languageCode = "pt"
+languageName = 'Português'
+contentDir = 'content/portuguese'
+footer = "Um software Open Source criado com Python e muito café."
+weight = 2
+[languages.pt.menu]
+[[languages.pt.menu.main]]
+name = "Sobre"
+identifier = "about"
+weight = 3
+url = "/pt/sobre"
+
+
+[params.contact]
+twitter = "https://twitter.com/registomkiel"
+github = "https://github.com/getfalafel"
+linkedin = "https://www.linkedin.com/in/regis-tomkiel/"
+youtube = "https://www.youtube.com/channel/UC5Zz7kecrmtYZSKCS79_-Wg"
+
+
+[permalinks]
+fixed = ":title/"
+blog = ":slug"
+pages = ":slug"
+
+[taxonomies]
+tag = "tags"
+category = "categories"

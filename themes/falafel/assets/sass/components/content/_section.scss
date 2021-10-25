@@ -1,0 +1,46 @@
+section {
+  &.main {
+    padding-top: 8rem;
+    padding-left: 4rem;
+
+    @media(min-width: 1024px) {
+      width: 1024px;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    .listing-articles {
+      ul {
+        li {
+          padding: 0.25rem 0;
+          a {
+            color: var(--text);
+            font-weight: 600;
+            position: relative;
+            padding-left: 1rem;
+            text-decoration: underline;
+            &::before {
+              content: "";
+              position: absolute;
+              top: calc(50% - 0.2rem);
+              left: 0;
+              width: 0.5rem;
+              height: 0.5rem;
+              background-color: var(--primary-color);
+              border-radius: 50%;
+            }
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+
+    }
+
+    @import "./article";
+  }
+}

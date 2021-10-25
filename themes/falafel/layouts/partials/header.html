@@ -1,0 +1,32 @@
+<header>
+  <nav>
+    <ul class="menu">
+      {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li {{ if or ($currentPage.IsMenuCurrent "main" . ) ($currentPage.HasMenuCurrent "main" . )}} class="current-menu" {{ end }}>
+            <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+    <div class="searchbar">
+
+    </div>
+    <ul class="contact">
+      {{ range $key, $value:= .Site.Params.contact }}
+      {{ $icon := $key | printf "svg/%s.svg" }}
+      <li>
+        <a href="{{ $value }}" target="_blank">
+          {{ partial $icon . }}
+        </a>
+      </li>
+      {{ end }}
+      <div class="change-language">
+        {{ if eq $.Site.Language.LanguageName "English" }}
+          <a href="{{ .Site.BaseURL }}/pt">Português</a>
+        {{ else }}
+          <a href="{{ .Site.BaseURL }}">English</a>
+        {{ end }}
+      </div>
+    </ul>
+  </nav>
+</header>
