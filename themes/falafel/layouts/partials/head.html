@@ -13,9 +13,9 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="format-detection" content="address=no" />
 
-  <title>{{ .Title }}</title>
+  <title>{{ .Site.Title }} - {{ .Title }}</title>
   <meta name="description" content="">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/img/favicon.png">
 
   <link rel="canonical" href="{{ .Site.BaseURL }}">
 
