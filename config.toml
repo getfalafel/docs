@@ -1,4 +1,4 @@
-baseURL = 'https://getfalafel.github.io'
+baseURL = 'https://getfalafel.github.io/docs/'
 title = 'Falafel'
 defaultContentLanguage = "en"
 theme = 'falafel'
@@ -6,7 +6,7 @@ theme = 'falafel'
 [languages]
 [languages.en]
 title = "Falafel"
-baseURL = "https://getfalafel.github.io/en"
+baseURL = "https://getfalafel.github.io/docs/en"
 languageCode = "en"
 languageName = 'English'
 contentDir = 'content/english'
@@ -26,7 +26,7 @@ url = "/welcome-to-falafel/about-the-falafel/"
 
 [languages.pt]
 title = "Falafel"
-baseURL = "https://getfalafel.github.io/pt"
+baseURL = "https://getfalafel.github.io/docs/pt"
 languageCode = "pt"
 languageName = 'Português'
 contentDir = 'content/portuguese'
