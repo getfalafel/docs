@@ -1,4 +1,4 @@
-baseURL = 'https://getfalafel.github.io/docs'
+baseURL = 'https://getfalafel.github.io'
 title = 'Falafel'
 defaultContentLanguage = "en"
 theme = 'falafel'
