@@ -1,0 +1,35 @@
+<aside>
+  <div class="sidebar-content">
+    <a href="{{ .Site.BaseURL }}" class="logo">
+      <picture>
+        <source srcset="{{ .Site.BaseURL }}/img/logo/falafel-logo.webp" type="image/webp">
+        <source srcset="{{ .Site.BaseURL }}/img/logo/falafel-logo.png" type="image/png">
+        <img src="{{ .Site.BaseURL }}/img/logo/falafel-logo.png" alt="{{ .Site.Title }}">
+      </picture>
+      {{ .Site.Title }}
+    </a>
+    <div class="sidebar-menu">
+      <nav>
+        <ul>
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.docs }}
+          <li {{ if or ($currentPage.IsMenuCurrent "docs" . ) ($currentPage.HasMenuCurrent "docs" . )}} class="active" {{ end }}>
+            <a href="{{ .URL }}">
+              <h2>{{ .Name }}</h2>
+            </a>
+            {{ if .HasChildren }}
+            <ul>
+              {{ range .Children }}
+              <li {{ if $currentPage.IsMenuCurrent "docs" . }} class="active" {{ end }}>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,9 @@
+.content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 25vw 75vw;
+  padding-bottom: 10rem;
+
+  @import './aside';
+  @import './section';
+}

@@ -1,0 +1,15 @@
+<footer>
+  <div class="copyright">
+    <small>
+      <script>
+        document.write((new Date()).getFullYear())
+      </script>
+      <a href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+      </a>
+    </small>
+    <small>
+      {{ .Site.Params.Footer }}
+    </small>
+  </div>
+</footer>

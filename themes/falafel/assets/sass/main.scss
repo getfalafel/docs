@@ -1,0 +1,12 @@
+// Theme
+@import "./theme/reset";
+@import "./theme/variables";
+@import "./theme/colors";
+@import "./theme/fonts";
+
+// Components
+@import "./components/default";
+@import "./components/body";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/content/content";
