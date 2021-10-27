@@ -8,7 +8,7 @@
 <meta name=apple-mobile-web-app-status-bar-style content="white-translucent">
 <meta name=format-detection content="telephone=no">
 <meta name=format-detection content="address=no">
-<title>Falafel - Categories</title>
+<title>Falafel - Como executar o Falafel</title>
 <meta name=description content>
 <link rel=icon type=image/png sizes=32x32 href=https://getfalafel.github.io/docs/pt/img/favicon.png>
 <link rel=canonical href=https://getfalafel.github.io/docs/pt>
@@ -75,7 +75,7 @@ Falafel
 <div class=sidebar-menu>
 <nav>
 <ul>
-<li>
+<li class=active>
 <a href=/docs/pt/bem-vinda-ao-falafel/>
 <h2>Bem-vinda ao Falafel</h2>
 </a>
@@ -83,7 +83,7 @@ Falafel
 <li>
 <a href=/docs/pt/bem-vinda-ao-falafel/sobre-o-falafel/>Sobre o Falafel</a>
 </li>
-<li>
+<li class=active>
 <a href=/docs/pt/bem-vinda-ao-falafel/como-executaer/>Como executar o projeto</a>
 </li>
 </ul>
@@ -94,7 +94,79 @@ Falafel
 </div>
 </aside>
 <section class=main>
-<h1>Categories</h1>
+<h1>Como executar o Falafel</h1>
+<article>
+<h3 id=como-instalar>Como instalar:</h3>
+<p>Para instalar o projeto, você precisa:</p>
+<ul>
+<li>
+<p>Python3</p>
+</li>
+<li>
+<p>Git</p>
+</li>
+</ul>
+<h4 id=instalar-o-python>Instalar o Python:</h4>
+<p>Python é necessário&mldr;</p>
+<ul>
+<li>
+<p>GNU/Linux:</p>
+<ul>
+<li>Debian:
+<ul>
+<li>Atualizar lista de pacotes: <code> sudo apt update</code></li>
+<li>Atualizar pacotes<code>sudo apt upgrade</code></li>
+<li>Instalar dependências: <code>sudo apt install wget software-properties-common build-essential libnss3-dev zlib1g-dev libgdbm-dev libncurses5-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev libbz2-dev</code></li>
+<li>Baixar pacote 3.9.7: <code>wget https://www.python.org/ftp/python/3.9.7/Python-3.9.7.tgz</code></li>
+<li>Extrair pacote: <code>tar xvf Python-3.9.7.tgz</code></li>
+<li>Mudar para diretório descompactado: <code>cd Python-3.9.7/</code></li>
+<li>Executar comando de configuração: <code>./configure --enable-optimizations</code></li>
+<li>Construir pacote e instalar: <code>sudo make install</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>macOS:</p>
+<ul>
+<li>Usando <strong>homebrew</strong>: <code>brew install python3</code></li>
+<li>Site oficial: <a href=https://www.python.org/downloads/macos/>https://www.python.org/downloads/macos/</a></li>
+</ul>
+</li>
+<li>
+<p>Windows:</p>
+<ul>
+<li>Siga as recomendações do site oficial: <a href=https://www.python.org/downloads/release/python-390/>https://www.python.org/downloads/release/python-390/</a></li>
+</ul>
+</li>
+</ul>
+<p>Verifique a versão instalada:</p>
+<p><code>python3 --version</code></p>
+<h4 id=clonar-repositório>Clonar repositório:</h4>
+<p>No terminal, execute: <code> git clone git@github.com:getfalafel/falafel.git</code></p>
+<h4 id=criar-o-ambiente-virtual>Criar o ambiente virtual:</h4>
+<ul>
+<li>
+<p>Entrar na pasta do projeto: <code>cd falafel</code></p>
+</li>
+<li>
+<p>Criar <strong>ambiente virtual</strong>: <code>python3 -m venv .venv</code></p>
+</li>
+<li>
+<p>Acessar o ambiente:</p>
+<ul>
+<li>bash/zsh: <code>source .venv/bin/activate</code></li>
+<li>fish: <code>source .venv/bin/activate.fish</code></li>
+</ul>
+</li>
+<li>
+<p>Como instalar as dependências: <code> pip3 install -r requirements.txt</code></p>
+</li>
+</ul>
+<h4 id=executar-servidor-web-de-desenvolvimento>Executar servidor web de desenvolvimento</h4>
+<p>Execute o comando: <code>python3 fava.py -s </code></p>
+<p>No navegador, acesse: https://localhost:5000</p>
+</article>
 <div class=listing-articles>
 <ul>
 </ul>
